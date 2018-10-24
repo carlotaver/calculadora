@@ -32,6 +32,15 @@ function onClick(event) {
         break;
       default:
         console.log("Esto no es un numero: " + pulsado + ".");
+      case "C":
+        console.log("Esto es: " + pulsado + ".");
+        break;
+      case "←":
+        console.log("Esto es: " + pulsado + ".");
+        break;
+      case "=":
+        console.log("Esto es: " + pulsado + ".");
+        break;
     }
   }
 }
