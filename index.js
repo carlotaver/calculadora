@@ -24,6 +24,12 @@ function onClick(event) {
         primerNumero = primerNumero + pulsado;
         resultado.innerText = primerNumero;
         break;
+      case "+":
+      case "−":
+      case "×":
+      case "÷":
+        console.log("Esto es un operador: " + pulsado + ".");
+        break;
       default:
         console.log("Esto no es un numero: " + pulsado + ".");
     }
