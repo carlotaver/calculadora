@@ -3,6 +3,8 @@ const container = document.querySelector(".calculator-container");
 container.addEventListener("click", onClick);
 
 let primerNumero = "";
+let operador = "";
+let segundoNumero = "";
 
 function onClick(event) {
   if (event.target.tagName === "BUTTON") {
@@ -21,14 +23,21 @@ function onClick(event) {
       case "8":
       case "9":
         console.log("Esto es un numero: " + pulsado + ".");
-        primerNumero = primerNumero + pulsado;
-        resultado.innerText = primerNumero;
+
+        if (operador === "") {
+          primerNumero = primerNumero + pulsado;
+          resultado.innerText = primerNumero;
+        } else {
+          segundoNumero = segundoNumero + pulsado;
+          resultado.innerText = segundoNumero;
+        }
         break;
       case "+":
       case "−":
       case "×":
       case "÷":
         console.log("Esto es un operador: " + pulsado + ".");
+        operador = pulsado;
         break;
       default:
         console.log("Esto no es un numero: " + pulsado + ".");
@@ -40,6 +49,18 @@ function onClick(event) {
         break;
       case "=":
         console.log("Esto es: " + pulsado + ".");
+        switch (operador) {
+          case "+":
+            const sumado = parseInt(primerNumero) + parseInt(segundoNumero);
+            resultado.innerText = String(sumado);
+            break;
+          case "−":
+            break;
+          case "×":
+            break;
+          case "÷":
+            break;
+        }
         break;
     }
   }
