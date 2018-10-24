@@ -2,6 +2,8 @@ const container = document.querySelector(".calculator-container");
 
 container.addEventListener("click", onClick);
 
+let primerNumero = "";
+
 function onClick(event) {
   if (event.target.tagName === "BUTTON") {
     const pulsado = event.target.innerText;
@@ -19,7 +21,8 @@ function onClick(event) {
       case "8":
       case "9":
         console.log("Esto es un numero: " + pulsado + ".");
-        resultado.innerText = pulsado;
+        primerNumero = primerNumero + pulsado;
+        resultado.innerText = primerNumero;
         break;
       default:
         console.log("Esto no es un numero: " + pulsado + ".");
