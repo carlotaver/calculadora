@@ -55,10 +55,17 @@ function onClick(event) {
             resultado.innerText = String(sumado);
             break;
           case "−":
+            const restado = parseInt(primerNumero) - parseInt(segundoNumero);
+            resultado.innerText = String(restado);
             break;
           case "×":
+            const multiplicado =
+              parseInt(primerNumero) * parseInt(segundoNumero);
+            resultado.innerText = String(multiplicado);
             break;
           case "÷":
+            const dividido = parseInt(primerNumero) / parseInt(segundoNumero);
+            resultado.innerText = String(dividido);
             break;
         }
         break;
