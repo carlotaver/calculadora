@@ -42,6 +42,13 @@ function onClick(event) {
       default:
         console.log("Esto no es un numero: " + pulsado + ".");
       case "C":
+        if (operador === "") {
+          primerNumero = "";
+          resultado.innerText = "0";
+        } else {
+          segundoNumero = "";
+          resultado.innerText = "0";
+        }
         console.log("Esto es: " + pulsado + ".");
         break;
       case "←":
