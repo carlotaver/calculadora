@@ -53,6 +53,14 @@ function onClick(event) {
         break;
       case "←":
         console.log("Esto es: " + pulsado + ".");
+        if (operador === "") {
+          primerNumero = primerNumero.slice(0, primerNumero.length - 1);
+          resultado.innerText = primerNumero;
+        } else {
+          segundoNumero = segundoNumero.slice(0, segundoNumero.length - 1);
+          resultado.innerText = segundoNumero;
+        }
+
         break;
       case "=":
         console.log("Esto es: " + pulsado + ".");
